@@ -256,6 +256,9 @@ Reveal.initialize({
 	// Display a presentation progress bar
 	progress: true,
 
+	// Set default timing of 2 minutes per slide
+	defaultTiming: 120,
+
 	// Display the page number of the current slide
 	slideNumber: false,
 
