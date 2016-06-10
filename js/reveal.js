@@ -4583,6 +4583,9 @@
 		navigatePrev: navigatePrev,
 		navigateNext: navigateNext,
 
+		// Shows a help overlay with keyboard shortcuts
+		showHelp: showHelp,
+
 		// Forces an update in slide layout
 		layout: layout,
 
