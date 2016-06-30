@@ -92,7 +92,7 @@
 			// i.e. contained within a limited portion of the screen
 			embedded: false,
 
-			// Flags if we should show a help overlay when the questionmark
+			// Flags if we should show a help overlay when the question-mark
 			// key is pressed
 			help: true,
 
@@ -131,7 +131,7 @@
 			// Dispatches all reveal.js events to the parent window through postMessage
 			postMessageEvents: false,
 
-			// Focuses body when page changes visiblity to ensure keyboard shortcuts work
+			// Focuses body when page changes visibility to ensure keyboard shortcuts work
 			focusBodyOnPageVisibilityChange: true,
 
 			// Transition style
@@ -514,6 +514,7 @@
 
 		// Cache references to elements
 		dom.controls = document.querySelector( '.reveal .controls' );
+		dom.theme = document.querySelector( '#theme' );
 
 		dom.wrapper.setAttribute( 'role', 'application' );
 
@@ -532,6 +533,8 @@
 	 * Creates a hidden div with role aria-live to announce the
 	 * current slide content. Hide the div off-screen to make it
 	 * available only to Assistive Technologies.
+	 *
+	 * @return {HTMLElement}
 	 */
 	function createStatusDiv() {
 
@@ -541,7 +544,7 @@
 			statusDiv.style.position = 'absolute';
 			statusDiv.style.height = '1px';
 			statusDiv.style.width = '1px';
-			statusDiv.style.overflow ='hidden';
+			statusDiv.style.overflow = 'hidden';
 			statusDiv.style.clip = 'rect( 1px, 1px, 1px, 1px )';
 			statusDiv.setAttribute( 'id', 'aria-status-div' );
 			statusDiv.setAttribute( 'aria-live', 'polite' );
@@ -704,6 +707,13 @@
 	 * Creates an HTML element and returns a reference to it.
 	 * If the element already exists the existing instance will
 	 * be returned.
+	 *
+	 * @param {HTMLElement} container
+	 * @param {string} tagname
+	 * @param {string} classname
+	 * @param {string} innerHTML
+	 *
+	 * @return {HTMLElement}
 	 */
 	function createSingletonNode( container, tagname, classname, innerHTML ) {
 
@@ -790,6 +800,7 @@
 	 * @param {HTMLElement} slide
 	 * @param {HTMLElement} container The element that the background
 	 * should be appended to
+	 * @return {HTMLElement} New background div
 	 */
 	function createBackground( slide, container ) {
 
@@ -907,6 +918,8 @@
 	/**
 	 * Applies the configuration settings from the config
 	 * object. May be called multiple times.
+	 *
+	 * @param {object} options
 	 */
 	function configure( options ) {
 
@@ -1140,6 +1153,9 @@
 	/**
 	 * Extend object a with the properties of object b.
 	 * If there's a conflict, object b takes precedence.
+	 *
+	 * @param {object} a
+	 * @param {object} b
 	 */
 	function extend( a, b ) {
 
@@ -1151,6 +1167,9 @@
 
 	/**
 	 * Converts the target object to an array.
+	 *
+	 * @param {object} o
+	 * @return {object[]}
 	 */
 	function toArray( o ) {
 
@@ -1160,6 +1179,9 @@
 
 	/**
 	 * Utility for deserializing a value.
+	 *
+	 * @param {*} value
+	 * @return {*}
 	 */
 	function deserialize( value ) {
 
@@ -1178,8 +1200,10 @@
 	 * Measures the distance in pixels between point a
 	 * and point b.
 	 *
-	 * @param {Object} a point with x/y properties
-	 * @param {Object} b point with x/y properties
+	 * @param {object} a point with x/y properties
+	 * @param {object} b point with x/y properties
+	 *
+	 * @return {number}
 	 */
 	function distanceBetween( a, b ) {
 
@@ -1192,6 +1216,9 @@
 
 	/**
 	 * Applies a CSS transform to the target element.
+	 *
+	 * @param {HTMLElement} element
+	 * @param {string} transform
 	 */
 	function transformElement( element, transform ) {
 
@@ -1206,6 +1233,8 @@
 	 * Applies CSS transforms to the slides container. The container
 	 * is transformed from two separate sources: layout and the overview
 	 * mode.
+	 *
+	 * @param {object} transforms
 	 */
 	function transformSlides( transforms ) {
 
@@ -1225,6 +1254,8 @@
 
 	/**
 	 * Injects the given CSS styles into the DOM.
+	 *
+	 * @param {string} value
 	 */
 	function injectStyleSheet( value ) {
 
@@ -1243,11 +1274,17 @@
 	/**
 	 * Converts various color input formats to an {r:0,g:0,b:0} object.
 	 *
-	 * @param {String} color The string representation of a color,
-	 * the following formats are supported:
-	 * - #000
-	 * - #000000
-	 * - rgb(0,0,0)
+	 * @param {string} color The string representation of a color
+	 * @example
+	 * colorToRgb('#000');
+	 * @example
+	 * colorToRgb('#000000');
+	 * @example
+	 * colorToRgb('rgb(0,0,0)');
+	 * @example
+	 * colorToRgb('rgba(0,0,0)');
+	 *
+	 * @return {{r: number, g: number, b: number, [a]: number}|null}
 	 */
 	function colorToRgb( color ) {
 
@@ -1297,7 +1334,8 @@
 	/**
 	 * Calculates brightness on a scale of 0-255.
 	 *
-	 * @param color See colorStringToRgb for supported formats.
+	 * @param {string} color See colorToRgb for supported formats.
+	 * @see {@link colorToRgb}
 	 */
 	function colorBrightness( color ) {
 
@@ -1316,6 +1354,9 @@
 	 * target element.
 	 *
 	 * remaining height = [ configured parent height ] - [ current parent height ]
+	 * 
+	 * @param {HTMLElement} element
+	 * @param {number} [height]
 	 */
 	function getRemainingHeight( element, height ) {
 
@@ -1438,6 +1479,8 @@
 
 	/**
 	 * Bind preview frame links.
+	 *
+	 * @param {string} [selector=a] - selector for anchors
 	 */
 	function enablePreviewLinks( selector ) {
 
@@ -1468,6 +1511,8 @@
 
 	/**
 	 * Opens a preview window for the target URL.
+	 *
+	 * @param {string} url - url for preview iframe src
 	 */
 	function showPreview( url ) {
 
@@ -1512,7 +1557,7 @@
 	}
 
 	/**
-	 * Opens a overlay window with help material.
+	 * Opens an overlay window with help material.
 	 */
 	function showHelp() {
 
@@ -1660,6 +1705,9 @@
 	/**
 	 * Applies layout logic to the contents of all slides in
 	 * the presentation.
+	 *
+	 * @param {string|number} width
+	 * @param {string|number} height
 	 */
 	function layoutSlideContents( width, height ) {
 
@@ -1693,6 +1741,9 @@
 	 * Calculates the computed pixel size of our slides. These
 	 * values are based on the width and height configuration
 	 * options.
+	 *
+	 * @param {number} [presentationWidth=dom.wrapper.offsetWidth]
+	 * @param {number} [presentationHeight=dom.wrapper.offsetHeight]
 	 */
 	function getComputedSlideSize( presentationWidth, presentationHeight ) {
 
@@ -1730,7 +1781,7 @@
 	 * from the stack.
 	 *
 	 * @param {HTMLElement} stack The vertical stack element
-	 * @param {int} v Index to memorize
+	 * @param {string|number} [v=0] Index to memorize
 	 */
 	function setPreviousVerticalIndex( stack, v ) {
 
@@ -1931,7 +1982,7 @@
 	/**
 	 * Toggles the slide overview mode on and off.
 	 *
-	 * @param {Boolean} override Optional flag which overrides the
+	 * @param {Boolean} [override] Flag which overrides the
 	 * toggle logic and forcibly sets the desired state. True means
 	 * overview is open, false means it's closed.
 	 */
@@ -1962,8 +2013,9 @@
 	 * Checks if the current or specified slide is vertical
 	 * (nested within another slide).
 	 *
-	 * @param {HTMLElement} slide [optional] The slide to check
+	 * @param {HTMLElement} [slide=currentSlide] The slide to check
 	 * orientation of
+	 * @return {Boolean}
 	 */
 	function isVerticalSlide( slide ) {
 
@@ -2048,6 +2100,8 @@
 
 	/**
 	 * Checks if we are currently in the paused mode.
+	 *
+	 * @return {Boolean}
 	 */
 	function isPaused() {
 
@@ -2058,7 +2112,7 @@
 	/**
 	 * Toggles the auto slide mode on and off.
 	 *
-	 * @param {Boolean} override Optional flag which sets the desired state.
+	 * @param {Boolean} [override] Flag which sets the desired state.
 	 * True means autoplay starts, false means it stops.
 	 */
 
@@ -2076,6 +2130,8 @@
 
 	/**
 	 * Checks if the auto slide mode is currently on.
+	 *
+	 * @return {Boolean}
 	 */
 	function isAutoSliding() {
 
@@ -2088,11 +2144,11 @@
 	 * slide which matches the specified horizontal and vertical
 	 * indices.
 	 *
-	 * @param {int} h Horizontal index of the target slide
-	 * @param {int} v Vertical index of the target slide
-	 * @param {int} f Optional index of a fragment within the
+	 * @param {number} [h=indexh] Horizontal index of the target slide
+	 * @param {number} [v=indexv] Vertical index of the target slide
+	 * @param {number} [f] Index of a fragment within the
 	 * target slide to activate
-	 * @param {int} o Optional origin for use in multimaster environments
+	 * @param {number} [o] Origin for use in multimaster environments
 	 */
 	function slide( h, v, f, o ) {
 
@@ -2346,12 +2402,12 @@
 	 * Updates one dimension of slides by showing the slide
 	 * with the specified index.
 	 *
-	 * @param {String} selector A CSS selector that will fetch
+	 * @param {string} selector A CSS selector that will fetch
 	 * the group of slides we are working with
-	 * @param {Number} index The index of the slide that should be
+	 * @param {number} index The index of the slide that should be
 	 * shown
 	 *
-	 * @return {Number} The index of the slide that is now shown,
+	 * @return {number} The index of the slide that is now shown,
 	 * might differ from the passed in index if it was out of
 	 * bounds.
 	 */
@@ -2534,10 +2590,10 @@
 	}
 
 	/**
-	 * Pick up notes from the current slide and display tham
+	 * Pick up notes from the current slide and display them
 	 * to the viewer.
 	 *
-	 * @see `showNotes` config value
+	 * @see {@link config.showNotes}
 	 */
 	function updateNotes() {
 
@@ -2609,6 +2665,11 @@
 	/**
 	 * Applies HTML formatting to a slide number before it's
 	 * written to the DOM.
+	 *
+	 * @param {number} a Current slide
+	 * @param {string} delimiter Character to separate slide numbers
+	 * @param {(number|*)} b Total slides
+	 * @return {string} HTML string fragment
 	 */
 	function formatSlideNumber( a, delimiter, b ) {
 
@@ -2680,7 +2741,7 @@
 	 * Updates the background elements to reflect the current
 	 * slide.
 	 *
-	 * @param {Boolean} includeAll If true, the backgrounds of
+	 * @param {boolean} includeAll If true, the backgrounds of
 	 * all vertical slides (not just the present) will be updated.
 	 */
 	function updateBackground( includeAll ) {
@@ -2855,7 +2916,7 @@
 				verticalOffsetMultiplier = ( backgroundHeight - slideHeight ) / ( verticalSlideCount-1 );
 			}
 
-			verticalOffset = verticalSlideCount > 0 ?  verticalOffsetMultiplier * indexv * 1 : 0;
+			verticalOffset = verticalSlideCount > 0 ?  verticalOffsetMultiplier * indexv : 0;
 
 			dom.background.style.backgroundPosition = horizontalOffset + 'px ' + -verticalOffset + 'px';
 
@@ -2867,6 +2928,8 @@
 	 * Called when the given slide is within the configured view
 	 * distance. Shows the slide element and loads any content
 	 * that is set to load lazily (data-src).
+	 *
+	 * @param {HTMLElement} slide Slide to show
 	 */
 	function showSlide( slide ) {
 
@@ -2955,6 +3018,8 @@
 	/**
 	 * Called when the given slide is moved outside of the
 	 * configured view distance.
+	 *
+	 * @param {HTMLElement} slide
 	 */
 	function hideSlide( slide ) {
 
@@ -2973,7 +3038,7 @@
 	/**
 	 * Determine what available routes there are for navigation.
 	 *
-	 * @return {Object} containing four booleans: left/right/up/down
+	 * @return {{left: boolean, right: boolean, up: boolean, down: boolean}}
 	 */
 	function availableRoutes() {
 
@@ -3002,7 +3067,7 @@
 	 * Returns an object describing the available fragment
 	 * directions.
 	 *
-	 * @return {Object} two boolean properties: prev/next
+	 * @return {{prev: boolean, next: boolean}}
 	 */
 	function availableFragments() {
 
@@ -3048,6 +3113,8 @@
 	/**
 	 * Start playback of any embedded content inside of
 	 * the targeted slide.
+	 *
+	 * @param {HTMLElement} slide
 	 */
 	function startEmbeddedContent( slide ) {
 
@@ -3085,7 +3152,9 @@
 
 	/**
 	 * "Starts" the content of an embedded iframe using the
-	 * postmessage API.
+	 * postMessage API.
+	 *
+	 * @param {object} event - postMessage API event
 	 */
 	function startEmbeddedIframe( event ) {
 
@@ -3109,6 +3178,8 @@
 	/**
 	 * Stop playback of any embedded content inside of
 	 * the targeted slide.
+	 *
+	 * @param {HTMLElement} slide
 	 */
 	function stopEmbeddedContent( slide ) {
 
@@ -3154,6 +3225,8 @@
 	/**
 	 * Returns the number of past slides. This can be used as a global
 	 * flattened index for slides.
+	 *
+	 * @return {number} Past slide count
 	 */
 	function getSlidePastCount() {
 
@@ -3198,6 +3271,8 @@
 	/**
 	 * Returns a value ranging from 0-1 that represents
 	 * how far into the presentation we have navigated.
+	 *
+	 * @return {number}
 	 */
 	function getProgress() {
 
@@ -3231,6 +3306,8 @@
 	/**
 	 * Checks if this presentation is running inside of the
 	 * speaker notes window.
+	 *
+	 * @return {boolean}
 	 */
 	function isSpeakerNotes() {
 
@@ -3286,7 +3363,7 @@
 	 * Updates the page URL (hash) to reflect the current
 	 * state.
 	 *
-	 * @param {Number} delay The time in ms to wait before
+	 * @param {number} delay The time in ms to wait before
 	 * writing the hash
 	 */
 	function writeURL( delay ) {
@@ -3324,16 +3401,15 @@
 		}
 
 	}
-
 	/**
-	 * Retrieves the h/v location of the current, or specified,
-	 * slide.
+	 * Retrieves the h/v location and fragment of the current,
+	 * or specified, slide.
 	 *
-	 * @param {HTMLElement} slide If specified, the returned
+	 * @param {HTMLElement} [slide] If specified, the returned
 	 * index will be for this slide rather than the currently
 	 * active one
 	 *
-	 * @return {Object} { h: <int>, v: <int>, f: <int> }
+	 * @return {{h: number, v: number, f: number}}
 	 */
 	function getIndices( slide ) {
 
@@ -3381,6 +3457,8 @@
 
 	/**
 	 * Retrieves the total number of slides in this presentation.
+	 *
+	 * @return {number}
 	 */
 	function getTotalSlides() {
 
@@ -3390,6 +3468,8 @@
 
 	/**
 	 * Returns the slide element matching the specified index.
+	 *
+	 * @return {HTMLElement}
 	 */
 	function getSlide( x, y ) {
 
@@ -3409,6 +3489,10 @@
 	 * All slides, even the ones with no background properties
 	 * defined, have a background element so as long as the
 	 * index is valid an element will be returned.
+	 *
+	 * @param {number} x Horizontal background index
+	 * @param {number} y Vertical background index
+	 * @return {(HTMLElement[]|*)}
 	 */
 	function getSlideBackground( x, y ) {
 
@@ -3439,6 +3523,9 @@
 	 * defined in two ways:
 	 * 1. As a data-notes attribute on the slide <section>
 	 * 2. As an <aside class="notes"> inside of the slide
+	 *
+	 * @param {HTMLElement} [slide=currentSlide]
+	 * @return {(string|null)}
 	 */
 	function getSlideNotes( slide ) {
 
@@ -3464,6 +3551,8 @@
 	 * Retrieves the current state of the presentation as
 	 * an object. This state can then be restored at any
 	 * time.
+	 *
+	 * @return {{indexh: number, indexv: number, indexf: number, paused: boolean, overview: boolean}}
 	 */
 	function getState() {
 
@@ -3482,7 +3571,8 @@
 	/**
 	 * Restores the presentation to the given state.
 	 *
-	 * @param {Object} state As generated by getState()
+	 * @param {object} state As generated by getState()
+	 * @see {@link getState} generates the parameter `state`
 	 */
 	function setState( state ) {
 
@@ -3516,6 +3606,9 @@
 	 * attribute to each node if such an attribute is not already present,
 	 * and sets that attribute to an integer value which is the position of
 	 * the fragment within the fragments list.
+	 *
+	 * @param {object[]|*} fragments
+	 * @return {object[]} sorted Sorted array of fragments
 	 */
 	function sortFragments( fragments ) {
 
@@ -3567,12 +3660,12 @@
 	/**
 	 * Navigate to the specified slide fragment.
 	 *
-	 * @param {Number} index The index of the fragment that
+	 * @param {?number} index The index of the fragment that
 	 * should be shown, -1 means all are invisible
-	 * @param {Number} offset Integer offset to apply to the
+	 * @param {number} offset Integer offset to apply to the
 	 * fragment index
 	 *
-	 * @return {Boolean} true if a change was made in any
+	 * @return {boolean} true if a change was made in any
 	 * fragments visibility as part of this call
 	 */
 	function navigateFragment( index, offset ) {
@@ -3655,7 +3748,7 @@
 	/**
 	 * Navigate to the next slide fragment.
 	 *
-	 * @return {Boolean} true if there was a next fragment,
+	 * @return {boolean} true if there was a next fragment,
 	 * false otherwise
 	 */
 	function nextFragment() {
@@ -3667,7 +3760,7 @@
 	/**
 	 * Navigate to the previous slide fragment.
 	 *
-	 * @return {Boolean} true if there was a previous fragment,
+	 * @return {boolean} true if there was a previous fragment,
 	 * false otherwise
 	 */
 	function previousFragment() {
@@ -3908,6 +4001,8 @@
 	/**
 	 * Called by all event handlers that are based on user
 	 * input.
+	 *
+	 * @param {object} [event]
 	 */
 	function onUserInput( event ) {
 
@@ -3919,6 +4014,8 @@
 
 	/**
 	 * Handler for the document level 'keypress' event.
+	 *
+	 * @param {object} event
 	 */
 	function onDocumentKeyPress( event ) {
 
@@ -3936,6 +4033,8 @@
 
 	/**
 	 * Handler for the document level 'keydown' event.
+	 *
+	 * @param {object} event
 	 */
 	function onDocumentKeyDown( event ) {
 
@@ -4071,6 +4170,8 @@
 	/**
 	 * Handler for the 'touchstart' event, enables support for
 	 * swipe and pinch gestures.
+	 *
+	 * @param {object} event
 	 */
 	function onTouchStart( event ) {
 
@@ -4096,6 +4197,8 @@
 
 	/**
 	 * Handler for the 'touchmove' event.
+	 *
+	 * @param {object} event
 	 */
 	function onTouchMove( event ) {
 
@@ -4185,6 +4288,8 @@
 
 	/**
 	 * Handler for the 'touchend' event.
+	 *
+	 * @param {object} event
 	 */
 	function onTouchEnd( event ) {
 
@@ -4194,6 +4299,8 @@
 
 	/**
 	 * Convert pointer down to touch start.
+	 *
+	 * @param {object} event
 	 */
 	function onPointerDown( event ) {
 
@@ -4206,6 +4313,8 @@
 
 	/**
 	 * Convert pointer move to touch move.
+	 *
+	 * @param {object} event
 	 */
 	function onPointerMove( event ) {
 
@@ -4218,6 +4327,8 @@
 
 	/**
 	 * Convert pointer up to touch end.
+	 *
+	 * @param {object} event
 	 */
 	function onPointerUp( event ) {
 
@@ -4231,6 +4342,8 @@
 	/**
 	 * Handles mouse wheel scrolling, throttled to avoid skipping
 	 * multiple slides.
+	 *
+	 * @param {object} event
 	 */
 	function onDocumentMouseScroll( event ) {
 
@@ -4255,6 +4368,8 @@
 	 * closest approximate horizontal slide using this equation:
 	 *
 	 * ( clickX / presentationWidth ) * numberOfSlides
+	 *
+	 * @param {object} event
 	 */
 	function onProgressClicked( event ) {
 
@@ -4285,6 +4400,8 @@
 
 	/**
 	 * Handler for the window level 'hashchange' event.
+	 *
+	 * @param {object} [event]
 	 */
 	function onWindowHashChange( event ) {
 
@@ -4294,6 +4411,8 @@
 
 	/**
 	 * Handler for the window level 'resize' event.
+	 *
+	 * @param {object} [event]
 	 */
 	function onWindowResize( event ) {
 
@@ -4303,6 +4422,8 @@
 
 	/**
 	 * Handle for the window level 'visibilitychange' event.
+	 *
+	 * @param {object} [event]
 	 */
 	function onPageVisibilityChange( event ) {
 
@@ -4324,6 +4445,8 @@
 
 	/**
 	 * Invoked when a slide is and we're in the overview.
+	 *
+	 * @param {object} event
 	 */
 	function onOverviewSlideClicked( event ) {
 
@@ -4357,6 +4480,8 @@
 	/**
 	 * Handles clicks on links that are set to preview in the
 	 * iframe overlay.
+	 *
+	 * @param {object} event
 	 */
 	function onPreviewLinkClicked( event ) {
 
@@ -4372,6 +4497,8 @@
 
 	/**
 	 * Handles click on the auto-sliding controls element.
+	 *
+	 * @param {object} [event]
 	 */
 	function onAutoSlidePlayerClick( event ) {
 
@@ -4403,7 +4530,7 @@
 	 *
 	 * @param {HTMLElement} container The component will append
 	 * itself to this
-	 * @param {Function} progressCheck A method which will be
+	 * @param {function} progressCheck A method which will be
 	 * called frequently to get the current progress on a range
 	 * of 0-1
 	 */
@@ -4440,6 +4567,9 @@
 
 	}
 
+	/**
+	 * @param value
+	 */
 	Playback.prototype.setPlaying = function( value ) {
 
 		var wasPlaying = this.playing;
