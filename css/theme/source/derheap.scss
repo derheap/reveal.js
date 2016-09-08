@@ -1,0 +1,276 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// my colors
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 36px;
+$mainFont: 'Fira Sans OT',  'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Fira Sans OT', 'Source Sans Pro', Helvetica, sans-serif;
+$headingColor: $green;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 1.2em;
+$heading2Size: 1.2em;
+$heading3Size: 1.2em;
+$heading4Size: 1.2em;
+
+
+
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// Overrides
+.reveal .slides {
+	text-align:left;
+}
+
+.reveal pre {
+	margin-left:0;
+	margin-right:0;
+  width:100%;
+}
+
+.reveal .slides > section, .reveal .slides > section > section {
+
+    padding: 0px 0px;
+}
+
+
+
+// Headings
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+	font-weight:normal;
+}
+
+
+// Title
+//
+.reveal .titleslide {
+  margin-top:30%;
+}
+
+.reveal .titleslide h1 {
+  font-size:2em;
+}
+
+.reveal .maintitle {
+  margin-top:0;
+  background-color:$blue;
+  color:#fff;
+  height:100%
+}
+
+.reveal .maintitle h1,
+.reveal .maintitle h2,
+.reveal .maintitle h3 {
+  color:#fff;
+  line-height:1em;
+}
+
+.reveal .maintitle h1 {
+  font-size:4em;
+}
+
+.reveal .maintitle .author {
+  font-size:0.66em;
+  position:absolute;
+  bottom:1em;
+}
+
+// Images
+
+.reveal section img {
+	margin: 15px 0px;
+	background: transparent;
+	border: none;
+
+	box-shadow: none;
+	display:block;
+}
+
+.reveal section figure {
+  max-height:95%;
+  height: 750px;
+
+}
+
+.reveal section figcaption,
+.reveal cite {
+  font-size:0.5em;
+}
+
+
+// code
+
+.reveal code {
+	font-family: 'Fira Mono OT',  'Source Code Pro', monospace;
+  font-size:1.0em;
+  line-height:1.3em;
+  max-height:none;
+  color: $magenta;
+}
+
+.reveal pre {
+	font-family: 'Fira Mono OT',  'Source Code Pro', monospace;
+  font-size:0.7em;
+  line-height:1.3em;
+  max-height:none;
+  box-shadow:none;
+}
+
+.reveal pre code {
+	background-color:transparent;
+	max-height:none;
+}
+
+.reveal .code-s {
+  font-size: 0.8em;
+}
+.reveal .code-xs {
+  font-size: 0.66em;
+}
+
+.reveal code-overflowy {
+  overflow-y: auto;
+}
+
+
+// Blockquotes
+
+.reveal blockquote {
+	display: block;
+	position: relative;
+	width: 90%;
+	margin: $blockMargin auto;
+	padding: 5px;
+
+	font-style: italic;
+	font-size:1.4em;
+	background: none;
+	box-shadow: none;
+}
+
+.reveal blockquote p:last-child {
+  display: block;
+  text-align:right;
+  font-size:0.4em;
+  font-style:normal;
+  }
+
+
+  // prism.js
+
+  pre[class*="language-"] {
+  	background-color:transparent;
+  	padding:0;
+  	white-space: pre-wrap;
+  	max-height:720px;
+  }
+
+    code[class*="language-"] {
+  	background-color:transparent;
+  	padding:0;
+  	white-space: pre-wrap;
+  }
+
+  :not(pre) > code[class*="language-"] {
+  background-color: lighten($backgroundColor,10%);
+  }
+
+// Listen
+
+.reveal li p {
+  margin-top:0;
+}
+
+// Specials
+
+.list-2col ul,
+.list-2col + ul {
+  -webkit-column-count: 2;
+}
+
+.reveal .zwiti {
+	background: red;
+}
+
+.reveal .zwiti h1 {
+	color: white;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #666;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #444;
+}
