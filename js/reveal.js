@@ -3168,7 +3168,8 @@
 
 			// HTML5 media elements
 			toArray( slide.querySelectorAll( 'video, audio' ) ).forEach( function( el ) {
-				if( el.hasAttribute( 'data-autoplay' ) && typeof el.play === 'function' ) {
+				if( ( el.hasAttribute( 'data-autoplay' ) || el.hasAttribute( 'data-paused-by-reveal' ) ) && typeof el.play === 'function' ) {
+					el.removeAttribute('data-paused-by-reveal');
 					el.play();
 				}
 			} );
@@ -3231,6 +3232,7 @@
 			// HTML5 media elements
 			toArray( slide.querySelectorAll( 'video, audio' ) ).forEach( function( el ) {
 				if( !el.hasAttribute( 'data-ignore' ) && typeof el.pause === 'function' ) {
+					el.addAttribute('data-paused-by-reveal');
 					el.pause();
 				}
 			} );
