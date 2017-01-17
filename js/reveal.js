@@ -2360,9 +2360,9 @@
 
 		updateControls();
 		updateProgress();
-		updateBackground( true );
 		updateSlideNumber();
 		updateSlidesVisibility();
+		updateBackground( true );
 		updateNotes();
 
 		formatEmbeddedContent();
