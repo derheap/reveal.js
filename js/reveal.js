@@ -160,6 +160,9 @@
 			// Number of slides away from the current that are visible
 			viewDistance: 3,
 
+			// The display mode that will be used to show slides
+			display: 'block',
+
 			// Script dependencies to load
 			dependencies: []
 
