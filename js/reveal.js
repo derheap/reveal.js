@@ -1605,21 +1605,20 @@
 	 * help is open, false means it's closed.
 	 */
 	function toggleHelp( override ){
-		
+
 		if( typeof override === 'boolean' ) {
-			override ? showHelp( true ) : closeOverlay();
+			override ? showHelp() : closeOverlay();
 		}
-		else {		
+		else {
 			if( dom.overlay ) {
 				closeOverlay();
 			}
 			else {
-				showHelp( true );
+				showHelp();
 			}
 		}
 	}
 
-	
 	/**
 	 * Opens an overlay window with help material.
 	 */
@@ -4793,10 +4792,6 @@
 		navigatePrev: navigatePrev,
 		navigateNext: navigateNext,
 
-		// Shows a help overlay with keyboard shortcuts
-		showHelp: showHelp,
-		toggleHelp: toggleHelp,
-
 		// Forces an update in slide layout
 		layout: layout,
 
@@ -4808,6 +4803,9 @@
 
 		// Returns an object with the available fragments as booleans (prev/next)
 		availableFragments: availableFragments,
+
+		// Toggles a help overlay with keyboard shortcuts
+		toggleHelp: toggleHelp,
 
 		// Toggles the overview mode on/off
 		toggleOverview: toggleOverview,
