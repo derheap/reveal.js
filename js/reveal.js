@@ -1413,7 +1413,7 @@
 	 * target element.
 	 *
 	 * remaining height = [ configured parent height ] - [ current parent height ]
-	 * 
+	 *
 	 * @param {HTMLElement} element
 	 * @param {number} [height]
 	 */
@@ -3074,6 +3074,8 @@
 				// Videos
 				else if ( backgroundVideo && !isSpeakerNotes() ) {
 					var video = document.createElement( 'video' );
+					video.setAttribute( 'autoplay', '' );
+					video.setAttribute( 'playsinline', '' );
 
 					if( backgroundVideoLoop ) {
 						video.setAttribute( 'loop', '' );
@@ -3906,7 +3908,7 @@
 			// If there are media elements with data-autoplay,
 			// automatically set the autoSlide duration to the
 			// length of that media. Not applicable if the slide
-			// is divided up into fragments. 
+			// is divided up into fragments.
 			// playbackRate is accounted for in the duration.
 			if( currentSlide.querySelectorAll( '.fragment' ).length === 0 ) {
 				toArray( currentSlide.querySelectorAll( 'video, audio' ) ).forEach( function( el ) {
