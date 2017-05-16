@@ -52,9 +52,9 @@
 			// Display presentation control arrows
 			controls: true,
 
-			// Hint at where the user can navigate, for example by animating
-			// the down arrow when we first encounter a vertical slide
-			controlsHints: true,
+			// Help the user learn the controls by providing hints, for example by
+			// bouncing the down arrow when they first encounter a vertical slide
+			controlsTutorial: true,
 
 			// Determines where controls appear, "edges" or "bottom-right"
 			controlsLayout: 'bottom-right',
@@ -2868,7 +2868,7 @@
 
 		}
 
-		if( config.controlsHints ) {
+		if( config.controlsTutorial ) {
 
 			// Highlight control arrows with an animation to ensure
 			// that the viewer knows how to navigate
@@ -2878,7 +2878,7 @@
 			else {
 				dom.controlsDownArrow.classList.remove( 'highlight' );
 
-				if( !hasNavigatedRight && routes.right && indexh === 0 ) {
+				if( !hasNavigatedRight && routes.right && indexv === 0 ) {
 					dom.controlsRightArrow.classList.add( 'highlight' );
 				}
 				else {
