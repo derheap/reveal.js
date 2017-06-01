@@ -90,6 +90,7 @@ section.has-light-background {
 // ---------------------------------------------
 // Overrides
 
+<<<<<<< HEAD
 .reveal ol,
 .reveal dl,
 .reveal ul {
@@ -97,6 +98,8 @@ section.has-light-background {
 
 }
 
+=======
+>>>>>>> WIP as of 2017-06-01.
 /*********************************************
  * SLIDES
  *********************************************/
@@ -208,11 +211,19 @@ section.has-light-background {
     border: none;
     box-shadow: none;
     display: block;
+<<<<<<< HEAD
+    max-height: 650px;
+}
+
+.reveal .caption {
+    font-size: 0.5em;
+=======
     max-height:650px;
 }
 
 .reveal .caption {
     font-size: 0.66em;
+>>>>>>> WIP as of 2017-06-01.
 }
 
 .reveal section figure {
@@ -243,11 +254,19 @@ section.has-light-background {
     text-align: right;
     font-size: 0.8em;
 }
+<<<<<<< HEAD
 
 .reveal .attribution cite {
     font-size: 0.6em;
 }
 
+=======
+
+.reveal .attribution cite {
+    font-size: 0.6em;
+}
+
+>>>>>>> WIP as of 2017-06-01.
 // code
 .reveal code {
     font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
@@ -342,6 +361,7 @@ code[class*="language-"] .callout {
 .list-2col ul,
 .list-2col+ul {
     -webkit-column-count: 2;
+<<<<<<< HEAD
     column-count: 2;
 }
 
@@ -355,6 +375,14 @@ code[class*="language-"] .callout {
     font-size: 0.8em;
 }
 
+=======
+}
+
+.reveal .smaller {
+    font-size: 0.8em;
+}
+
+>>>>>>> WIP as of 2017-06-01.
 .reveal .zwiti .Content-wrapper {
     display: -webkit-flex;
     display: flex;
@@ -365,6 +393,7 @@ code[class*="language-"] .callout {
 
 .reveal .zwiti h1 {
     color: red;
+<<<<<<< HEAD
 }
 
 .reveal .TitleSlide {}
@@ -418,4 +447,25 @@ code[class*="language-"] .callout {
 .flex .content img {
     max-width: 100%;
     height: auto;
+=======
+}
+
+.reveal .TitleSlide {}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #666;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #444;
+>>>>>>> WIP as of 2017-06-01.
 }
