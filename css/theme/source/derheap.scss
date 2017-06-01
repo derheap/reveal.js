@@ -4,273 +4,370 @@
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 
-
+$debug: false !default;
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
-
-
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
 // my colors
-
+// HS FL COLORS
+$hs-cool-1: #483b89;
+$hs-cool-2: #a2daf3;
+$hs-warm-1: #e2001a;
+$hs-warm-2: #eb6909;
+$hs-dunkelblau: rgb(44, 47, 136); // 11.2
+$hs-helllila: rgb(107, 62, 145); // 7.7
+$hs-dunkelrosa: rgb(163, 84, 148); // 4.9
+$hs-rosa: rgb(211, 83, 120); // 4.0
+$hs-rosa-aa: hsl(343, 59%, 54%); // 4.5
+$hs-orange: #ec6707; //3.2
+$hs-orange-aa: hsl(25, 94%, 39%); // 4.5
+$hs-orange-dark: #bd520a;
+$hs-rot: #e30613;
+$hs-rot-dark: #b61a10;
+$hs-hellblau: rgb(170, 221, 249); // 1.5
+$hs-hellblau-aa: hsl(201, 87%, 39%); // 4.5
 // Solarized colors
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
-
+$base03: #002b36;
+$base02: #073642;
+$base01: #586e75;
+$base00: #657b83;
+$base0: #839496;
+$base1: #93a1a1;
+$base2: #eee8d5;
+$base3: #fdf6e3;
+$yellow: #b58900;
+$orange: #cb4b16;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #222;
-
 $mainColor: #fff;
 $headingColor: #fff;
-
 $mainFontSize: 36px;
-$mainFont: 'Fira Sans OT',  'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Fira Sans OT', 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: Cargan,
+'Fira Sans OT',
+'Source Sans Pro',
+Helvetica,
+sans-serif;
+$headingFont: Cargan,
+'Fira Sans OT',
+'Source Sans Pro',
+Helvetica,
+sans-serif;
 $headingColor: $green;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
-
+$linkColorHover: lighten( $linkColor, 15%);
+$selectionBackgroundColor: lighten( $linkColor, 25%);
 $heading1Size: 1.2em;
 $heading2Size: 1.2em;
 $heading3Size: 1.2em;
 $heading4Size: 1.2em;
-
-
-
-
 section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #222;
+    }
 }
-
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
-
-
 // Overrides
+
+/*********************************************
+ * SLIDES
+ *********************************************/
+
 .reveal .slides {
-	text-align:left;
+    text-align: left;
+    @if ($debug) {
+        outline: 2px solid red;
+    }
 }
 
-.reveal pre {
-	margin-left:0;
-	margin-right:0;
-  width:100%;
-}
-
-.reveal .slides > section, .reveal .slides > section > section {
-
+.reveal .slides>section,
+.reveal .slides>section>section {
     padding: 0px 0px;
 }
 
+.reveal .slides>section.present,
+.reveal .slides>section>section.present {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
 
+.Content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @if ($debug) {
+        outline: 2px solid orange;
+    }
+}
+
+.Content-inner {
+    width: 100%;
+}
+
+.reveal pre {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
 
 // Headings
-
 .reveal h1,
 .reveal h2,
 .reveal h3,
 .reveal h4 {
-	font-weight:normal;
+    font-weight: normal;
 }
 
+.reveal h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.reveal h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: $hs-rosa;
+}
+
+.reveal h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: inherit;
+}
 
 // Title
 //
-.reveal .titleslide {
-  margin-top:30%;
+.reveal .TitleSlide {
+    padding-top: 30%;
 }
 
-.reveal .titleslide h1 {
-  font-size:2em;
+.reveal .TitleSlide h1 {
+    font-size: 2em;
+    color: #fff;
 }
 
 .reveal .maintitle {
-  margin-top:0;
-  background-color:$blue;
-  color:#fff;
-  height:100%
+    margin-top: 0;
+    background-color: $blue;
+    color: #fff;
+    height: 100%
 }
 
 .reveal .maintitle h1,
 .reveal .maintitle h2,
 .reveal .maintitle h3 {
-  color:#fff;
-  line-height:1em;
+    color: #fff;
+    line-height: 1em;
 }
 
 .reveal .maintitle h1 {
-  font-size:4em;
+    font-size: 4em;
 }
 
 .reveal .maintitle .author {
-  font-size:0.66em;
-  position:absolute;
-  bottom:1em;
+    font-size: 0.66em;
+    position: absolute;
+    bottom: 1em;
 }
 
 // Images
-
 .reveal section img {
-	margin: 15px 0px;
-	background: transparent;
-	border: none;
+    margin: 15px 0px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: block;
+    max-height:650px;
+}
 
-	box-shadow: none;
-	display:block;
+.reveal .caption {
+    font-size: 0.66em;
 }
 
 .reveal section figure {
-  max-height:95%;
-  height: 750px;
-
+    max-height: 95%;
+    height: 750px;
 }
 
 .reveal section figcaption,
 .reveal cite {
-  font-size:0.5em;
+    font-size: 0.5em;
 }
 
+// Blockquotes
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 0;
+    padding: 0;
+    color: $hs-orange;
+    font-style: italic;
+    font-size: 1.4em;
+    background: none;
+    box-shadow: none;
+}
+
+.reveal .attribution {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.reveal .attribution cite {
+    font-size: 0.6em;
+}
 
 // code
-
 .reveal code {
-	font-family: 'Fira Mono OT',  'Source Code Pro', monospace;
-  font-size:1.0em;
-  line-height:1.3em;
-  max-height:none;
-  color: $magenta;
+    font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
+    font-size: 1.0em;
+    line-height: 1.3em;
+    max-height: none;
 }
 
 .reveal pre {
-	font-family: 'Fira Mono OT',  'Source Code Pro', monospace;
-  font-size:0.7em;
-  line-height:1.3em;
-  max-height:none;
-  box-shadow:none;
+    font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
+    font-size: 0.7em;
+    line-height: 1.3em;
+    max-height: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.reveal p code {
+    color: $magenta;
 }
 
 .reveal pre code {
-	background-color:transparent;
-	max-height:none;
+    background-color: transparent;
+    max-height: none;
 }
 
 .reveal .code-s {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
+
 .reveal .code-xs {
-  font-size: 0.66em;
+    font-size: 0.66em;
 }
 
 .reveal code-overflowy {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
-
-// Blockquotes
-
-.reveal blockquote {
-	display: block;
-	position: relative;
-	width: 90%;
-	margin: $blockMargin auto;
-	padding: 5px;
-
-	font-style: italic;
-	font-size:1.4em;
-	background: none;
-	box-shadow: none;
+// prism.js
+pre[class*="language-"] {
+    background-color: transparent;
+    padding: 0;
+    white-space: pre-wrap;
+    max-height: 720px;
 }
 
-.reveal blockquote p:last-child {
-  display: block;
-  text-align:right;
-  font-size:0.4em;
-  font-style:normal;
-  }
+code[class*="language-"] {
+    background-color: transparent;
+    padding: 0;
+    white-space: pre-wrap;
+}
 
+ :not(pre)>code[class*="language-"] {
+    background-color: lighten($backgroundColor, 10%);
+}
 
-  // prism.js
+div.prism-show-language>div.prism-show-language-label {
+    font-size: 0.6em;
+}
 
-  pre[class*="language-"] {
-  	background-color:transparent;
-  	padding:0;
-  	white-space: pre-wrap;
-  	max-height:720px;
-  }
+code[class*="language-"] .callout {
+    background-color: red;
+    border-radius: 999px;
+    color: white !important;
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+}
 
-    code[class*="language-"] {
-  	background-color:transparent;
-  	padding:0;
-  	white-space: pre-wrap;
-  }
+.reveal .listingblock>.content {
+    background-color: #333;
+}
 
-  :not(pre) > code[class*="language-"] {
-  background-color: lighten($backgroundColor,10%);
-  }
+.reveal .listingblock .title {
+    font-size: 0.8em;
+    color: #aaa;
+}
 
 // Listen
+.reveal ul>li {
+    margin-bottom: 0.2em;
+}
 
 .reveal li p {
-  margin-top:0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 // Specials
-
 .list-2col ul,
-.list-2col + ul {
-  -webkit-column-count: 2;
+.list-2col+ul {
+    -webkit-column-count: 2;
 }
 
-.reveal .zwiti {
-	background: red;
+.reveal .smaller {
+    font-size: 0.8em;
+}
+
+.reveal .zwiti .Content-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 60vh;
 }
 
 .reveal .zwiti h1 {
-	color: white;
+    color: red;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #666;
+.reveal .TitleSlide {}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #666;
 }
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #000;
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #000;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #444;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #444;
 }

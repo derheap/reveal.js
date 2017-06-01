@@ -296,7 +296,8 @@ body {
  * SLIDES
  *********************************************/
 .reveal .slides {
-  text-align: left; }
+  text-align: left;
+  outline: 2px solid red; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
@@ -313,7 +314,8 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  outline: 2px solid orange; }
 
 .Content-inner {
   width: 100%; }
