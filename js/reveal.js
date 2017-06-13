@@ -524,6 +524,13 @@
 			dom.wrapper.classList.remove( 'no-hover' );
 		}
 
+		if( /iphone/gi.test( UA ) ) {
+			dom.wrapper.classList.add( 'ua-iphone' );
+		}
+		else {
+			dom.wrapper.classList.remove( 'ua-iphone' );
+		}
+
 		// Background element
 		dom.background = createSingletonNode( dom.wrapper, 'div', 'backgrounds', null );
 
