@@ -3335,6 +3335,13 @@
 		_appendParamToIframeSource( 'src', 'player.vimeo.com/', 'api=1' );
 		_appendParamToIframeSource( 'data-src', 'player.vimeo.com/', 'api=1' );
 
+		// Always show media controls on mobile devices
+		if( isMobileDevice ) {
+			toArray( dom.slides.querySelectorAll( 'video, audio' ) ).forEach( function( el ) {
+				el.controls = true;
+			} );
+		}
+
 	}
 
 	/**
