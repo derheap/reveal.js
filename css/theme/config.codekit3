@@ -281,6 +281,7 @@
 		"oS": 0,
 		"uL": 1
 		},
+<<<<<<< HEAD
 	"\/source\/derheap.scss.orig": {
 		"cB": 0,
 		"ft": 8192,
@@ -288,6 +289,8 @@
 		"oAP": "\/source\/derheap.scss.orig",
 		"oF": 0
 		},
+=======
+>>>>>>> Lots of styling changes.
 	"\/source\/league.scss": {
 		"aP": 0,
 		"bl": 0,
