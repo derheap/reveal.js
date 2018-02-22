@@ -4,100 +4,979 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "234CC64D-A677-446B-9D86-7E270161A880"
+		"uuidString": "275DC2A6-C33B-4359-B9DE-36CC96501FBC"
 		}
 	],
 "creatorBuild": "26261",
 "files": {
-	"\/beige.css": {
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
+	"\/.travis.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.travis.yml",
+		"oF": 0
+		},
+	"\/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/CONTRIBUTING.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/CONTRIBUTING.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/css\/.idea": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/css\/.idea",
+		"oF": 0
+		},
+	"\/css\/print\/paper.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/beige-min.css",
+		"oAP": "\/css\/print\/paper-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/black.css": {
+	"\/css\/print\/pdf.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/black-min.css",
+		"oAP": "\/css\/print\/pdf-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/blood.css": {
+	"\/css\/prism-default.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/blood-min.css",
+		"oAP": "\/css\/prism-default-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/derheap-debug.css": {
+	"\/css\/prism-o.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/prism-o-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/reveal.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/reveal.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/beige.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/beige-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/black.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/black-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/blood.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/blood-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/css\/derheap-debug.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/css\/derheap-debug-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/derheap-debug.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/derheap-debug.css",
+		"oF": 3,
+		"oS": 3
+		},
+	"\/css\/theme\/derheap.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/derheap.css",
+		"oF": 2,
+		"oS": 2
+		},
+	"\/css\/theme\/league.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/league-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/moon.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/moon-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/night.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/night-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/css\/theme\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/css\/theme\/revealtest.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/revealtest-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/serif.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/serif-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/simple.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/simple-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/sky.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/sky-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/solarized.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/solarized-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/mixins.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/mixins.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/settings.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/settings.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/theme.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/theme.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap-debug.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap-debug.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/reveal-test.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/reveal-test.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/revealtest.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/revealtest.scssc",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/beige.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/beige.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/black.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/black.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/blood.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/blood.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/derheap-debug.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/derheap-debug.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/derheap.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/derheap-debug-min.css",
+		"oAP": "\/css\/theme\/source\/derheap.css",
 		"oF": 0,
-		"oS": 3
+		"oS": 0,
+		"uL": 1
 		},
-	"\/derheap-debug.css": {
-		"aP": 1,
+	"\/css\/theme\/source\/derheap.scss.orig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/derheap.scss.orig",
+		"oF": 0
+		},
+	"\/css\/theme\/source\/league.scss": {
+		"aP": 0,
 		"bl": 0,
-		"ft": 16,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/league.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/moon.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/moon.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/night.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/night.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/revealtest.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/revealtest.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/serif.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/serif.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/simple.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/simple.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/sky.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/sky.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/solarized.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/solarized.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/source\/white.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/theme\/source\/white.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/template\/mixins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/derheap-debug-min.css",
+		"oAP": "\/css\/theme\/template\/mixins.css",
 		"oF": 0,
-		"oS": 3
+		"oS": 0,
+		"uL": 1
 		},
-	"\/derheap.css": {
-		"aP": 1,
+	"\/css\/theme\/template\/settings.scss": {
+		"aP": 0,
 		"bl": 0,
-		"ft": 16,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/derheap-min.css",
+		"oAP": "\/css\/theme\/template\/settings.css",
 		"oF": 0,
-		"oS": 3
+		"oS": 0,
+		"uL": 1
 		},
-	"\/league.css": {
+	"\/css\/theme\/template\/theme.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/theme\/template\/theme.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/theme\/white.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/league-min.css",
+		"oAP": "\/css\/theme\/white-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/moon.css": {
+	"\/demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/demo.html",
+		"oF": 0
+		},
+	"\/Gruntfile.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/Gruntfile-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/index.html",
+		"oF": 0
+		},
+	"\/js\/reveal.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/reveal-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lib\/css\/zenburn.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/moon-min.css",
+		"oAP": "\/lib\/css\/zenburn-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/night.css": {
+	"\/lib\/font\/league-gothic\/league-gothic.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/night-min.css",
+		"oAP": "\/lib\/font\/league-gothic\/league-gothic-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/lib\/font\/league-gothic\/league-gothic.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/league-gothic\/league-gothic.eot",
+		"oF": 0
+		},
+	"\/lib\/font\/league-gothic\/league-gothic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/league-gothic\/league-gothic.ttf",
+		"oF": 0
+		},
+	"\/lib\/font\/league-gothic\/league-gothic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/league-gothic\/league-gothic.woff",
+		"oF": 0
+		},
+	"\/lib\/font\/league-gothic\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/league-gothic\/LICENSE",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/LICENSE",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-italic.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-italic.eot",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-italic.ttf",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-italic.woff",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-regular.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-regular.eot",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-regular.ttf",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-regular.woff",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.eot",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.ttf",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibold.woff",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.eot",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.ttf",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-semibolditalic.woff",
+		"oF": 0
+		},
+	"\/lib\/font\/source-sans-pro\/source-sans-pro.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/lib\/font\/source-sans-pro\/source-sans-pro-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/lib\/js\/caniuse-embed.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/lib\/js\/caniuse-embed.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lib\/js\/classList.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/lib\/js\/classList-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lib\/js\/head.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/lib\/js\/head.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lib\/js\/html5shiv.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/lib\/js\/html5shiv-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lib\/js\/prism.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/lib\/js\/prism-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/LICENSE",
+		"oF": 0
+		},
+	"\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/plugin\/highlight\/highlight.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/highlight\/highlight-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/markdown\/example.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/plugin\/markdown\/example.html",
+		"oF": 0
+		},
+	"\/plugin\/markdown\/example.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/plugin\/markdown\/example.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/plugin\/markdown\/markdown.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/markdown\/markdown-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/markdown\/marked.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/markdown\/marked-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/math\/math.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/math\/math-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/multiplex\/client.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/multiplex\/client-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/multiplex\/index.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/multiplex\/index-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/multiplex\/master.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/multiplex\/master-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/multiplex\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/plugin\/multiplex\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/plugin\/notes-server\/client.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/notes-server\/client-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/notes-server\/index.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/notes-server\/index-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/notes-server\/notes.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/plugin\/notes-server\/notes.html",
+		"oF": 0
+		},
+	"\/plugin\/notes\/notes.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/plugin\/notes\/notes.html",
+		"oF": 0
+		},
+	"\/plugin\/notes\/notes.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/notes\/notes-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/print-pdf\/print-pdf.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/print-pdf\/print-pdf-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/search\/search.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/search\/search-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugin\/zoom-js\/zoom.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugin\/zoom-js\/zoom-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/README.md": {
 		"cB": 0,
@@ -117,345 +996,219 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/revealtest.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/revealtest-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/serif.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/test\/examples\/assets\/image1.png": {
+		"ft": 32768,
+		"iS": 21991,
 		"oA": 0,
-		"oAP": "\/serif-min.css",
+		"oAP": "\/test\/examples\/assets\/image1.png",
 		"oF": 0,
-		"oS": 3
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
-	"\/simple.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/test\/examples\/assets\/image2.png": {
+		"ft": 32768,
+		"iS": 10237,
 		"oA": 0,
-		"oAP": "\/simple-min.css",
+		"oAP": "\/test\/examples\/assets\/image2.png",
 		"oF": 0,
-		"oS": 3
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
-	"\/sky.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/sky-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/solarized.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/solarized-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/mixins.scssc": {
+	"\/test\/examples\/barebones.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/mixins.scssc",
+		"oA": 0,
+		"oAP": "\/test\/examples\/barebones.html",
 		"oF": 0
 		},
-	"\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/settings.scssc": {
+	"\/test\/examples\/embedded-media.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/settings.scssc",
+		"oA": 0,
+		"oAP": "\/test\/examples\/embedded-media.html",
 		"oF": 0
 		},
-	"\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/theme.scssc": {
+	"\/test\/examples\/math.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/303a69ebe045396ce46d9c92871a2beb20156c1d\/theme.scssc",
+		"oA": 0,
+		"oAP": "\/test\/examples\/math.html",
 		"oF": 0
 		},
-	"\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap-debug.scssc": {
+	"\/test\/examples\/slide-backgrounds.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap-debug.scssc",
+		"oA": 0,
+		"oAP": "\/test\/examples\/slide-backgrounds.html",
 		"oF": 0
 		},
-	"\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap.scssc": {
+	"\/test\/examples\/slide-transitions.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/derheap.scssc",
+		"oA": 0,
+		"oAP": "\/test\/examples\/slide-transitions.html",
 		"oF": 0
 		},
-	"\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/reveal-test.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/reveal-test.scssc",
-		"oF": 0
-		},
-	"\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/revealtest.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/.sass-cache\/3def6efa5b4bf1a60e981ce023a0da80ae2ffbbb\/revealtest.scssc",
-		"oF": 0
-		},
-	"\/source\/beige.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/beige.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/black.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/black.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/blood.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/blood.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/derheap-debug.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/derheap-debug.css",
-		"oF": 3,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/derheap.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/derheap.css",
-		"oF": 3,
-		"oS": 0,
-		"uL": 1
-		},
-<<<<<<< HEAD
-	"\/source\/derheap.scss.orig": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/source\/derheap.scss.orig",
-		"oF": 0
-		},
-=======
->>>>>>> Lots of styling changes.
-	"\/source\/league.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/league.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/moon.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/moon.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/night.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/night.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/revealtest.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/revealtest.css",
-		"oF": 2,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/serif.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/serif.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/simple.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/simple.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/sky.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/sky.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/solarized.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/solarized.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/white.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/white.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/template\/mixins.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/mixins.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/template\/settings.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/settings.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/template\/theme.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/theme.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/white.css": {
+	"\/test\/qunit-1.12.0.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/white-min.css",
+		"oAP": "\/test\/qunit-1.12.0-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/test\/qunit-1.12.0.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/qunit-1.12.0-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/simple.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/test\/simple.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/test\/test-markdown-element-attributes.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-element-attributes.html",
+		"oF": 0
+		},
+	"\/test\/test-markdown-element-attributes.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-element-attributes-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test-markdown-external.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-external.html",
+		"oF": 0
+		},
+	"\/test\/test-markdown-external.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-external-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test-markdown-options.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-options.html",
+		"oF": 0
+		},
+	"\/test\/test-markdown-options.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-options-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test-markdown-slide-attributes.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-slide-attributes.html",
+		"oF": 0
+		},
+	"\/test\/test-markdown-slide-attributes.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-slide-attributes-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test-markdown.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown.html",
+		"oF": 0
+		},
+	"\/test\/test-markdown.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-markdown-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test-pdf.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test-pdf.html",
+		"oF": 0
+		},
+	"\/test\/test-pdf.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-pdf-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/test\/test.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/test\/test.html",
+		"oF": 0
+		},
+	"\/test\/test.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/test\/test-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		}
 	},
 "hooks": [
@@ -463,10 +1216,10 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 526551138,
-	"displayValue": "reveal js master themes",
-	"displayValueWasSetByUser": 1,
-	"iconImageName": "brackets_purple"
+	"creationDate": 540990221,
+	"displayValue": "reveal.js-derheap@github",
+	"displayValueWasSetByUser": 0,
+	"iconImageName": "brackets_green"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -880,7 +1633,7 @@
 			},
 		"array-callback-return": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{'allowImplicit': false}"
 			},
 		"array-element-newline": {
 			"active": 0,
@@ -1044,7 +1797,7 @@
 			},
 		"indent": {
 			"active": 0,
-			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1, }"
+			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1 }"
 			},
 		"init-declarations": {
 			"active": 0,
@@ -1272,7 +2025,7 @@
 			},
 		"no-extra-parens": {
 			"active": 0,
-			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none'}"
+			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none', 'enforceForArrowConditionals': false}"
 			},
 		"no-extra-semi": {
 			"active": 1,
@@ -1520,7 +2273,7 @@
 			},
 		"no-sync": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{'allowAtRootLevel': false}"
 			},
 		"no-tabs": {
 			"active": 0,
@@ -1544,7 +2297,7 @@
 			},
 		"no-trailing-spaces": {
 			"active": 0,
-			"optionString": "{'skipBlankLines': false}"
+			"optionString": "{'skipBlankLines': false, 'ignoreComments': false}"
 			},
 		"no-undef": {
 			"active": 1,
@@ -1560,7 +2313,7 @@
 			},
 		"no-underscore-dangle": {
 			"active": 0,
-			"optionString": "{'allow': [], 'allowAfterThis': false, 'allowAfterSuper': false}"
+			"optionString": "{'allow': [], 'allowAfterThis': false, 'allowAfterSuper': false, 'enforceInMethodNames': false}"
 			},
 		"no-unexpected-multiline": {
 			"active": 1,
@@ -2227,7 +2980,7 @@
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*-min.css",
+		"autoOutputPathFilenamePattern": "*.css",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
@@ -2276,7 +3029,7 @@
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -2296,8 +3049,8 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "",
-		"autoOutputPathReplace2": "",
+		"autoOutputPathReplace1": "kit",
+		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
 		"shouldRunCacheBuster": 0
 		},
@@ -2308,8 +3061,8 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
-		"createSourceMap": 0,
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"ieCompatibility": 1,
 		"outputStyle": 0,
@@ -2341,7 +3094,7 @@
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
-		"autoOutputAction": 2,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.*",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -2376,7 +3129,7 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
@@ -2405,7 +3158,7 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"importCSS": 0,
@@ -2429,7 +3182,7 @@
 		"autoOutputPathRelativePath": "\/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
 		"jsxMode": 0,
@@ -2446,7 +3199,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
@@ -2572,7 +3325,7 @@
 			"flagValue": -1
 			},
 		"screw-ie8": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
