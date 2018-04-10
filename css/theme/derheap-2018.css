@@ -5,117 +5,43 @@
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 
-$debug:true;
-$debug: false !default;
-// Default mixins and settings -----------------
-@import "../template/mixins";
-//@import "../template/settings";
-// Vertical spacing between blocks of text
-$blockMargin: 20px;
-// Headings
-$headingMargin: 0 0 $blockMargin 0;
-$headingLineHeight: 1.2;
-$headingTextShadow: none;
-$heading1TextShadow: $headingTextShadow;
-// Text selection
-$selectionBackgroundColor: #FF5E99;
-$selectionColor: #fff;
-// Generates the presentation background, can be overridden
-// to return a background image or gradient
-@mixin bodyBackground() {
-    background: $backgroundColor;
-}
-
-// ---------------------------------------------
-// Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-// my colors
-// HS FL COLORS
-$hs-cool-1: #483b89;
-$hs-cool-2: #a2daf3;
-$hs-warm-1: #e2001a;
-$hs-warm-2: #eb6909;
-$hs-dunkelblau: rgb(44, 47, 136); // 11.2
-$hs-helllila: rgb(107, 62, 145); // 7.7
-$hs-dunkelrosa: rgb(163, 84, 148); // 4.9
-$hs-rosa: rgb(211, 83, 120); // 4.0
-$hs-rosa-aa: hsl(343, 59%, 54%); // 4.5
-$hs-orange: #ec6707; //3.2
-$hs-orange-aa: hsl(25, 94%, 39%); // 4.5
-$hs-orange-dark: #bd520a;
-$hs-rot: #e30613;
-$hs-rot-dark: #b61a10;
-$hs-hellblau: rgb(170, 221, 249); // 1.5
-$hs-hellblau-aa: hsl(201, 87%, 39%); // 4.5
-// Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
-$mainColor: #fff;
-$mainFontSize: 36px;
-$mainFont: Cargan,
-'Fira Sans OT',
-'Source Sans Pro',
-Helvetica,
-sans-serif;
-$headingFont: Cargan,
-'Fira Sans OT',
-'Source Sans Pro',
-Helvetica,
-sans-serif;
-$headingColor: $hs-hellblau;
-$headingTextShadow: none;
-$headingLetterSpacing: normal;
-$headingTextTransform: none;
-$headingFontWeight: 600;
-$linkColor: $hs-hellblau;
-$linkColorHover: lighten( $linkColor, 15%);
-$selectionBackgroundColor: lighten( $linkColor, 25%);
-$heading1Size: 1.2em;
-$heading2Size: 1.2em;
-$heading3Size: 1.2em;
-$heading4Size: 1.2em;
-section.has-light-background {
-    &,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: #222;
-    }
+section.has-light-background,
+section.has-light-background h1,
+section.has-light-background h2,
+section.has-light-background h3,
+section.has-light-background h4,
+section.has-light-background h5,
+section.has-light-background h6 {
+    color: #222;
 }
 
-// Theme template ------------------------------
-//@import "../template/theme";
-//
-// Just copied …
-// Base theme template for reveal.js
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 
 body {
-    @include bodyBackground();
-    background-color: $backgroundColor;
+    background: #080808;
+    background-color: #080808;
 }
 
 .reveal {
-    font-family: $mainFont;
-    font-size: $mainFontSize;
+    font-family: Cargan, "Fira Sans OT", "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 36px;
     font-weight: normal;
-    color: $mainColor;
+    color: #fff;
 }
 
 ::selection {
-    color: $selectionColor;
-    background: $selectionBackgroundColor;
+    color: #fff;
+    background: white;
     text-shadow: none;
 }
 
 ::-moz-selection {
-    color: $selectionColor;
-    background: $selectionBackgroundColor;
+    color: #fff;
+    background: white;
     text-shadow: none;
 }
 
@@ -131,7 +57,7 @@ body {
  *********************************************/
 
 .reveal p {
-    margin: $blockMargin 0;
+    margin: 0.4em 0;
     line-height: 1.3;
 }
 
@@ -139,11 +65,14 @@ body {
 /* Ensure certain elements are never larger than the slide itself */
 
 .reveal img,
-.reveal video,
-.reveal iframe {
+.reveal video {
     max-width: 100%;
     max-height: 100%;
     height: 100vh;
+}
+
+.reveal iframe {
+    max-width: 100%;
 }
 
 .reveal strong,
@@ -198,7 +127,7 @@ body {
     display: block;
     position: relative;
     width: 90%;
-    margin: $blockMargin auto;
+    margin: 0.4em auto;
     text-align: left;
     font-size: 0.55em;
     font-family: monospace;
@@ -277,7 +206,7 @@ body {
  *********************************************/
 
 .reveal a {
-    color: $linkColor;
+    color: #aaddf9;
     text-decoration: none;
     -webkit-transition: color .15s ease;
     -moz-transition: color .15s ease;
@@ -285,14 +214,14 @@ body {
 }
 
 .reveal a:hover {
-    color: $linkColorHover;
+    color: #f1fafe;
     text-shadow: none;
     border: none;
 }
 
 .reveal .roll span:after {
     color: #fff;
-    background: darken( $linkColor, 15%);
+    background: #63c0f4;
 }
 
 
@@ -308,7 +237,7 @@ body {
 
 .reveal a:hover img {
     background: rgba(255, 255, 255, 0.2);
-    border-color: $linkColor;
+    border-color: #aaddf9;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -318,7 +247,7 @@ body {
  *********************************************/
 
 .reveal .controls {
-    color: $linkColor;
+    color: #aaddf9;
 }
 
 
@@ -328,19 +257,15 @@ body {
 
 .reveal .progress {
     background: rgba(0, 0, 0, 0.2);
-    color: $linkColor;
+    color: #aaddf9;
 }
 
 .reveal .progress span {
-    -webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-    -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-    transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
 
-// END of @import "../template/theme";
-//
-// ---------------------------------------------
-// Overrides
 .reveal ol,
 .reveal dl,
 .reveal ul {
@@ -354,9 +279,6 @@ body {
 
 .reveal .slides {
     text-align: left;
-    @if ($debug) {
-        outline: 2px solid red;
-    }
 }
 
 .reveal .slides>section,
@@ -382,23 +304,15 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    @if ($debug) {
-        outline: 2px solid orange;
-    }
-    height:100%;
+    height: 100%;
 }
 
 .Content-inner {
     width: 100%;
     height: 100%;
     display: grid;
-    @if ($debug) {
-        outline: 5px dotted green;
-    }
     align-items: center;
 }
-
-.Content-inner--notitle .imageblock {}
 
 pre {
     margin-left: 0;
@@ -417,14 +331,14 @@ pre {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-    margin: $headingMargin;
-    color: $headingColor;
-    font-family: $headingFont;
+    margin: 0 0 0.4em 0;
+    color: #aaddf9;
+    font-family: Cargan, "Fira Sans OT", "Source Sans Pro", Helvetica, sans-serif;
     font-weight: normal;
-    line-height: $headingLineHeight;
-    letter-spacing: $headingLetterSpacing;
-    text-transform: $headingTextTransform;
-    text-shadow: $headingTextShadow;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
     word-wrap: break-word;
 }
 
@@ -441,7 +355,7 @@ pre {
 .reveal h3 {
     font-size: 1.2em;
     font-weight: normal;
-    color: $hs-rosa;
+    color: #d35378;
 }
 
 .reveal h4 {
@@ -450,8 +364,6 @@ pre {
     color: inherit;
 }
 
-// Title
-//
 .reveal .TitleSlide {
     padding-top: 30%;
 }
@@ -461,11 +373,15 @@ pre {
     color: #fff;
 }
 
+.reveal .slides>.title.TitleSlide {
+    justify-content: space-between;
+}
+
 .reveal .maintitle {
     margin-top: 0;
-    background-color: $hs-dunkelblau;
+    background-color: #2c2f88;
     color: #fff;
-    height: 100%
+    height: 100%;
 }
 
 .reveal .maintitle h1,
@@ -496,9 +412,6 @@ pre {
     display: grid;
     grid-template-rows: 1fr min-content;
     align-items: center;
-    @if ($debug) {
-        outline: 1px dotted rebeccapurple;
-    }
 }
 
 img {
@@ -508,6 +421,7 @@ img {
 .caption {
     font-size: 0.5em;
     text-align: left;
+    word-break: break-all;
 }
 
 figure {
@@ -524,13 +438,13 @@ cite {
     display: block;
     position: relative;
     width: 70%;
-    margin: $blockMargin auto;
+    margin: 0.4em auto;
     padding: 5px;
     font-style: italic;
     width: 90%;
     margin: 0 0;
     padding: 0;
-    color: $hs-orange;
+    color: #ec6707;
     font-size: 1.4em;
 }
 
@@ -552,7 +466,6 @@ cite {
     font-size: 0.6em;
 }
 
-// code
 .reveal code {
     font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
     font-size: 1.0em;
@@ -569,8 +482,9 @@ cite {
     margin: 0;
 }
 
+.reveal dl code,
 .reveal p code {
-    color: $hs-helllila;
+    color: #ff88cc;
 }
 
 .reveal pre code {
@@ -590,7 +504,6 @@ cite {
     overflow-y: auto;
 }
 
-// prism.js
 pre[class*="language-"] {
     background-color: transparent;
     padding: 0;
@@ -604,8 +517,8 @@ code[class*="language-"] {
     white-space: pre-wrap;
 }
 
- :not(pre)>code[class*="language-"] {
-    background-color: lighten($backgroundColor, 10%);
+:not(pre)>code[class*="language-"] {
+    background-color: #3c3b3b;
 }
 
 div.prism-show-language>div.prism-show-language-label {
@@ -624,7 +537,8 @@ code[class*="language-"] .callout {
 }
 
 .reveal .listingblock>.content {
-    background-color: #333;
+    background-color: #000;
+    border-top: 2px solid #cfcfcf;
 }
 
 .reveal .listingblock .title {
@@ -632,7 +546,6 @@ code[class*="language-"] .callout {
     color: #aaa;
 }
 
-// Listen
 .reveal ul>li {
     margin-bottom: 0.2em;
 }
@@ -642,7 +555,23 @@ code[class*="language-"] .callout {
     margin-bottom: 0;
 }
 
-// Specials
+.reveal dl {
+    margin-left: 0;
+}
+
+.reveal dt {
+    font-weight: normal;
+}
+
+.reveal dd p {
+    margin-top: 0;
+}
+
+.dl-grid dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
 .col-2 {
     column-count: 2;
 }
@@ -653,6 +582,18 @@ code[class*="language-"] .callout {
 
 .col-4 {
     column-count: 4;
+}
+
+.larger {
+    font-size: 1.2em;
+}
+
+.large {
+    font-size: 1.41em;
+}
+
+.xl {
+    font-size: 2em;
 }
 
 .smaller {
@@ -675,14 +616,12 @@ code[class*="language-"] .callout {
     font-size: 0.8em;
 }
 
-// Legacy
 .list-2col ul,
 .list-2col+ul {
     -webkit-column-count: 2;
     column-count: 2;
 }
 
-// Legacy
 .list-4col ul,
 .list-4col+ul {
     -webkit-column-count: 4;
@@ -690,7 +629,8 @@ code[class*="language-"] .callout {
 }
 
 .reveal .zwiti {
-    background-color: $hs-dunkelrosa;
+    background-color: #a35494;
+    outline: 2em solid #a35494;
 }
 
 .reveal .zwiti .Content-wrapper {
@@ -703,8 +643,6 @@ code[class*="language-"] .callout {
     color: #fff;
     text-align: center;
 }
-
-.reveal .TitleSlide {}
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -719,7 +657,7 @@ code[class*="language-"] .callout {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #444;
 }
 
@@ -753,4 +691,38 @@ code[class*="language-"] .callout {
 .flex .content img {
     max-width: 100%;
     height: auto;
+}
+
+.example-html {
+    background: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-left: 2em solid white;
+    margin-left: -2em;
+    border-right: 2em solid white;
+    margin-right: -2em;
+}
+
+.example-html h1,
+.example-html h2,
+.example-html h3,
+.example-html h4,
+.example-html h5,
+.example-html h6 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.example-html a,
+.example-html a:link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.example-html a:visited {
+    color: purple;
+}
+
+.example-html a:active {
+    color: red;
 }
