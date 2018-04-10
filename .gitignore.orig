@@ -12,6 +12,7 @@ package-lock.json
 .sass-cache
 css/reveal.min.css
 js/reveal.min.js
+<<<<<<< HEAD
+=======
 css/theme/config.codekit
-/config.codekit3
-/css/config.codekit
+>>>>>>> Ignore codekit files.
