@@ -685,7 +685,7 @@
 
                 // Adhere to configured pages per slide limit
                 numberOfPages = Math.min(numberOfPages, config.pdfMaxPagesPerSlide);
-
+                numberOfPages = 1;
                 // Center slides vertically
                 if (numberOfPages === 1 && config.center || slide.classList.contains('center')) {
                     top = Math.max((pageHeight - contentHeight) / 2, 0);
