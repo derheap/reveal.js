@@ -1,0 +1,871 @@
+/**
+ * Based on the
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+//$debug:true;
+$debug: false !default;
+// Default mixins and settings -----------------
+@import "../template/mixins";
+//@import "../template/settings";
+// Vertical spacing between blocks of text
+$blockMargin: 0.4em;
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingLineHeight: 1.2;
+$headingTextShadow: none;
+$heading1TextShadow: $headingTextShadow;
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+    background: $backgroundColor;
+}
+
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+// my colors
+// HS FL COLORS
+$hs-cool-1: #483b89;
+$hs-cool-2: #a2daf3;
+$hs-warm-1: #e2001a;
+$hs-warm-2: #eb6909;
+$hs-dunkelblau: rgb(44, 47, 136); // 11.2
+$hs-helllila: rgb(107, 62, 145); // 7.7
+$hs-dunkelrosa: rgb(163, 84, 148); // 4.9
+$hs-rosa: rgb(211, 83, 120); // 4.0
+$hs-rosa-aa: hsl(343, 59%, 54%); // 4.5
+$hs-orange: #ec6707; //3.2
+$hs-orange-aa: hsl(25, 94%, 39%); // 4.5
+$hs-orange-dark: #bd520a;
+$hs-rot: #e30613;
+$hs-rot-dark: #b61a10;
+$hs-hellblau: rgb(170, 221, 249); // 1.5
+$hs-hellblau-aa: hsl(201, 87%, 39%); // 4.5
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+$mainColor: #fff;
+$mainFontSize: 36px;
+$mainFont: Cargan,
+'Fira Sans OT',
+'Source Sans Pro',
+Helvetica,
+sans-serif;
+$headingFont: Cargan,
+'Fira Sans OT',
+'Source Sans Pro',
+Helvetica,
+sans-serif;
+$headingColor: $hs-hellblau;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$codeColor: #ea00ff;
+$linkColor: $hs-hellblau;
+$linkColorHover: lighten( $linkColor, 15%);
+$selectionBackgroundColor: lighten( $linkColor, 25%);
+$heading1Size: 1.2em;
+$heading2Size: 1.2em;
+$heading3Size: 1.2em;
+$heading4Size: 1.2em;
+section.has-light-background {
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #222;
+    }
+}
+
+// Theme template ------------------------------
+//@import "../template/theme";
+//
+// Just copied …
+// Base theme template for reveal.js
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+body {
+    @include bodyBackground();
+    background-color: $backgroundColor;
+}
+
+.reveal {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: normal;
+    color: $mainColor;
+}
+
+::selection {
+    color: $selectionColor;
+    background: $selectionBackgroundColor;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    color: $selectionColor;
+    background: $selectionBackgroundColor;
+    text-shadow: none;
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+    line-height: 1.3;
+    font-weight: inherit;
+}
+
+
+/*********************************************
+ * OTHER
+ *********************************************/
+
+.reveal p {
+    margin: $blockMargin 0;
+    line-height: 1.3;
+}
+
+
+/* Ensure certain elements are never larger than the slide itself */
+
+.reveal img,
+.reveal video {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    height: 100%;
+}
+
+.reveal iframe {
+    max-width: 100%;
+}
+
+.reveal strong,
+.reveal b {
+    font-weight: bold;
+}
+
+.reveal em {
+    font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+
+.reveal ol {
+    list-style-type: decimal;
+}
+
+.reveal ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul {
+    list-style-type: square;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+    display: block;
+    margin-left: 40px;
+}
+
+.reveal dt {
+    font-weight: bold;
+}
+
+.reveal dd {
+    margin-left: 40px;
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: $blockMargin auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal code {
+    font-family: monospace;
+    text-transform: none;
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+}
+
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.reveal table th {
+    font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+    text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+    text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.reveal sup {
+    vertical-align: super;
+}
+
+.reveal sub {
+    vertical-align: sub;
+}
+
+.reveal small {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+}
+
+.reveal small * {
+    vertical-align: top;
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+
+.reveal a {
+    color: $linkColor;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    -moz-transition: color .15s ease;
+    transition: color .15s ease;
+}
+
+.reveal a:hover {
+    color: $linkColorHover;
+    text-shadow: none;
+    border: none;
+}
+
+.reveal .roll span:after {
+    color: #fff;
+    background: darken( $linkColor, 15%);
+}
+
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+
+.reveal a img {
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+}
+
+.reveal a:hover img {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: $linkColor;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+
+.reveal .controls {
+    color: $linkColor;
+}
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.2);
+    color: $linkColor;
+}
+
+.reveal .progress span {
+    -webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+    transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+}
+
+// END of @import "../template/theme";
+//
+// ---------------------------------------------
+// Overrides
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: block;
+}
+
+
+/*********************************************
+ * SLIDES
+ *********************************************/
+
+.reveal .slides {
+    text-align: left;
+    @if ($debug) {
+        outline: 2px solid red;
+    }
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+    padding: 0px 0px;
+}
+
+.reveal .slides>section.present,
+.reveal .slides>section>section.present {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+
+/*********************************************
+ * SLIDES CONTENT
+ *********************************************/
+
+.Content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @if ($debug) {
+        outline: 2px solid orange;
+    }
+    height:100%;
+    overflow: hidden;
+}
+
+.Content-inner {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    @if ($debug) {
+        outline: 5px dotted green;
+    }
+    align-items:center;
+    justify-content: start;
+    justify-items: start !important;
+    grid-template-columns: 100%;
+    grid-auto-rows: min-content;
+    align-content: center;
+    grid-gap: 1em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    justify-items: start !important;
+    grid-template-columns: 100%;
+    grid-auto-rows: min-content;
+    align-content: flex-start;
+    grid-gap: 1em;
+}
+
+.Content-inner>* {
+    margin-left: 0;
+}
+
+.Content-inner--notitle .imageblock {}
+
+pre {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: $headingMargin;
+    color: $headingColor;
+    font-family: $headingFont;
+    font-weight: normal;
+    line-height: $headingLineHeight;
+    letter-spacing: $headingLetterSpacing;
+    text-transform: $headingTextTransform;
+    text-shadow: $headingTextShadow;
+    word-wrap: break-word;
+}
+
+.reveal h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.reveal h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.reveal h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: $hs-rosa;
+}
+
+.reveal h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: inherit;
+}
+
+// Title
+//
+.reveal .TitleSlide {
+    padding-top: 30%;
+}
+
+.reveal .TitleSlide h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.reveal .slides>.title.TitleSlide {
+    justify-content: space-between;
+}
+
+.reveal .maintitle {
+    margin-top: 0;
+    background-color: $hs-dunkelblau;
+    color: #fff;
+    height: 100%
+}
+
+.reveal .maintitle h1,
+.reveal .maintitle h2,
+.reveal .maintitle h3 {
+    color: #fff;
+    line-height: 1em;
+}
+
+.reveal .maintitle h1 {
+    font-size: 4em;
+}
+
+.reveal .maintitle .author {
+    font-size: 0.66em;
+    position: absolute;
+    bottom: 1em;
+}
+
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+
+.imageblock {
+    /* max-width: 100%;
+    max-height: 100%;
+    height: inherit;*/
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-rows: max-content min-content;
+    /*align-items: center;*/
+    @if ($debug) {
+        outline: 1px dotted rebeccapurple;
+    }
+}
+
+.videoblock {
+    max-width: 100%;
+    max-height: 100%;
+    height: inherit;
+    @if ($debug) {
+        outline: 1px dotted rebeccapurple;
+    }
+}
+
+img {
+    object-fit: contain;
+    object-position: left center;
+}
+
+.caption {
+    font-size: 0.5em;
+    text-align: left;
+    word-break: break-all;
+    width: 100%;
+}
+
+figure {
+    max-height: 95%;
+    height: 750px;
+}
+
+figcaption,
+cite {
+    font-size: 0.5em;
+}
+
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: $blockMargin auto;
+    padding: 5px;
+    font-style: italic;
+    width: 90%;
+    margin: 0 0;
+    padding: 0;
+    color: $hs-orange;
+    font-size: 1.4em;
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+    display: inline-block;
+}
+
+.reveal q {
+    font-style: italic;
+}
+
+.attribution {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.attribution cite {
+    font-size: 0.6em;
+}
+
+// code
+.reveal code {
+    font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
+    font-size: 1.0em;
+    line-height: 1.3em;
+    max-height: none;
+}
+
+.reveal pre {
+    font-family: 'Fira Mono OT', 'Source Code Pro', monospace;
+    font-size: 0.7em;
+    line-height: 1.3em;
+    max-height: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.reveal dl code,
+.reveal p code {
+    color: $codeColor;
+}
+
+.reveal pre code {
+    background-color: transparent;
+    max-height: none;
+}
+
+.reveal .code-s {
+    font-size: 0.8em;
+}
+
+.reveal .code-xs {
+    font-size: 0.66em;
+}
+
+.reveal code-overflowy {
+    overflow-y: auto;
+}
+
+// prism.js
+pre[class*="language-"] {
+    background-color: transparent;
+    padding: 0;
+    white-space: pre-wrap;
+    max-height: 720px;
+}
+
+code[class*="language-"] {
+    background-color: transparent;
+    padding: 0;
+    white-space: pre-wrap;
+}
+
+ :not(pre)>code[class*="language-"] {
+    background-color: lighten($backgroundColor, 10%);
+}
+
+div.prism-show-language>div.prism-show-language-label {
+    font-size: 0.6em;
+}
+
+code[class*="language-"] .callout {
+    background-color: red;
+    border-radius: 999px;
+    color: white !important;
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+}
+
+.reveal .listingblock>.content {
+    background-color: #333;
+}
+
+.reveal .listingblock .title {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.reveal .listingblock {
+    width: 100%;
+}
+
+// Listen
+.reveal ul>li {
+    margin-bottom: 0.2em;
+}
+
+.reveal li p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.reveal dl {
+    margin-left: 0;
+}
+
+.reveal dt {
+    font-weight: normal;
+}
+
+.reveal dd p {
+    margin-top: 0;
+}
+
+.dl-grid dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+// Specials
+.col-2 {
+    column-count: 2;
+}
+
+.col-3 {
+    column-count: 3;
+}
+
+.col-4 {
+    column-count: 4;
+}
+
+.larger {
+    font-size: 1.2em;
+}
+
+.large {
+    font-size: 1.41em;
+}
+
+.xl {
+    font-size: 2em;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+.xs {
+    font-size: 0.66em;
+}
+
+.height-600 .content * {
+    height: 600px;
+}
+
+.reveal .smaller {
+    font-size: 0.8em;
+}
+
+// Legacy
+.list-2col ul,
+.list-2col+ul {
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+// Legacy
+.list-4col ul,
+.list-4col+ul {
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+
+.reveal .zwiti {
+    background-color: $hs-dunkelrosa;
+    outline: 2em solid $hs-dunkelrosa;
+}
+
+.reveal .zwiti .Content-wrapper {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+}
+
+.reveal .zwiti h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.reveal .TitleSlide {}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #666;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #444;
+}
+
+.flex33 .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex33 .content .paragraph {
+    min-width: 33%;
+    align-self: center;
+    text-align: center;
+}
+
+.flex33 .content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flex .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex .content * {
+    padding-right: 0.5em;
+    align-self: flex-start;
+}
+
+.flex .content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.example-html {
+    background: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-left: 2em solid white;
+    margin-left: -2em;
+    border-right: 2em solid white;
+    margin-right: -2em;
+}
+
+.example-html h1,
+.example-html h2,
+.example-html h3,
+.example-html h4,
+.example-html h5,
+.example-html h6 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.example-html a,
+.example-html a:link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.example-html a:visited {
+    color: purple;
+}
+
+.example-html a:hover {}
+
+.example-html a:active {
+    color: red;
+}
